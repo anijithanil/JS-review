@@ -153,5 +153,22 @@ const data = [
 console.log(title,author)
 
 const {genres} = book
- const[primarygenre,secondarygenre]=genres
- console.log(primarygenre,secondarygenre)
+ const[primarygenre,secondarygenre,...rem]=genres
+ console.log(primarygenre,secondarygenre,rem)
+ // destructuring element must be the last one
+
+ const newGenre = [genres,"bio"]
+ newGenre;
+
+ const newGenre2 = [...genres,"bio"]
+ newGenre2
+;
+
+//adding a field in current object book ,
+const updateBook = {...book,moviePublicationdate:"21-02-2001"}
+updateBook;
+console.log(updateBook)
+
+// overwriting an existing property
+const updateBook1 = {...book,moviePublicationdate:"21-02-2001",pages:100}
+console.log(updateBook1)

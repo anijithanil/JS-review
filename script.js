@@ -143,14 +143,9 @@ const data = [
     return data.find((d) => d.id === id);
   }
   
-// destructuring  
+ 
 
   const book = getBook(2)
-//   const title =book.title
-//   console.log(title)
-//   const author = book.author
-  const {title,author} = book
-console.log(title,author)
 
 const {genres} = book
  const[primarygenre,secondarygenre,...rem]=genres

@@ -160,4 +160,12 @@ const {genres} = book
  const {pages} =book
  const res = pages?"over a thousand": "less thna thousand"
  res;
- 
+
+ // arrow function
+ const {publicationDate} = book
+ console.log(publicationDate)
+
+ const getYear = (str)=>{
+    return(str.split("-")[0])}
+    
+ console.log(getYear(publicationDate))

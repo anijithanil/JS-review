@@ -155,3 +155,9 @@ console.log(title,author)
 const {genres} = book
  const[primarygenre,secondarygenre]=genres
  console.log(primarygenre,secondarygenre)
+
+
+ // template literal
+const {pages} = book
+ const summary = `${title} , is a ${pages} page writen by ${author}`
+ summary;

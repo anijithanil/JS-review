@@ -155,3 +155,9 @@ console.log(title,author)
 const {genres} = book
  const[primarygenre,secondarygenre]=genres
  console.log(primarygenre,secondarygenre)
+
+ // ternaries
+ const {pages} =book
+ const res = pages?"over a thousand": "less thna thousand"
+ res;
+ 

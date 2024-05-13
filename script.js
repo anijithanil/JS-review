@@ -143,29 +143,47 @@ const data = [
     return data.find((d) => d.id === id);
   }
   
-// destructuring  
+// // destructuring  
 
-  const book = getBook(2)
-//   const title =book.title
-//   console.log(title)
-//   const author = book.author
-  const {title,author} = book
-console.log(title,author)
+//   const book = getBook(2)
+// //   const title =book.title
+// //   console.log(title)
+// //   const author = book.author
+//   const {title,author} = book
+// console.log(title,author)
 
-const {genres} = book
- const[primarygenre,secondarygenre]=genres
- console.log(primarygenre,secondarygenre)
+// const {genres} = book
+//  const[primarygenre,secondarygenre]=genres
+//  console.log(primarygenre,secondarygenre)
 
- // ternaries
- const {pages} =book
- const res = pages?"over a thousand": "less thna thousand"
- res;
+//  // ternaries
+//  const {pages} =book
+//  const res = pages?"over a thousand": "less thna thousand"
+//  res;
 
- // arrow function
- const {publicationDate} = book
- console.log(publicationDate)
+//  // arrow function
+//  const {publicationDate} = book
+//  console.log(publicationDate)
 
- const getYear = (str)=>{
-    return(str.split("-")[0])}
+//  const getYear = (str)=>{
+//     return(str.split("-")[0])}
     
- console.log(getYear(publicationDate))
+//  console.log(getYear(publicationDate))
+
+
+// map method
+
+const x = [1,2,3,4,5,6].map((ele)=>ele*2)
+console.log(x)
+
+const books = getBooks()
+ const titles = books.map((e)=>e.title)
+
+console.log(titles) 
+
+const essentialData = books.map((book)=>{return {
+    title:book.title,
+    author:book.author
+}
+})
+console.log(essentialData)

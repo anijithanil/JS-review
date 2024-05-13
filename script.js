@@ -167,5 +167,13 @@ const {genres} = book
 
  const getYear = (str)=>{
     return(str.split("-")[0])}
-    
+
  console.log(getYear(publicationDate))
+
+ // optional chaining --- ?
+ function getTotalReviewCount(book){
+    const goodreads = book?.reviews?.goodreads?.reviewsCount
+    const librarything = book?.reviews?.librarything?.reviewsCount ?? 0
+    return goodreads + librarything;
+ }
+ console.log(getTotalReviewCount(book))

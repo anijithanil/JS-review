@@ -192,3 +192,6 @@ console.log(essentialData)
 
 const longbooks = books.filter((ele)=>(ele.pages>500)).filter((ele)=>ele.hasMovieAdaptation )
 console.log(longbooks)
+
+const adventureBooks = books.filter((ele)=>ele.genres.includes('adventure')).map((ele)=>ele.title)
+console.log(adventureBooks)

@@ -187,3 +187,8 @@ const essentialData = books.map((book)=>{return {
 }
 })
 console.log(essentialData)
+
+// filter method
+
+const longbooks = books.filter((ele)=>(ele.pages>500)).filter((ele)=>ele.hasMovieAdaptation )
+console.log(longbooks)

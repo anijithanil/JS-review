@@ -195,3 +195,9 @@ console.log(longbooks)
 
 const adventureBooks = books.filter((ele)=>ele.genres.includes('adventure')).map((ele)=>ele.title)
 console.log(adventureBooks)
+
+
+// reduce method 
+
+const bookcount = books.reduce((acc,book)=>acc+book.pages,0) 
+console.log(bookcount)

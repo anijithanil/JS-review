@@ -169,3 +169,17 @@ const {genres} = book
     return(str.split("-")[0])}
     
  console.log(getYear(publicationDate))
+
+
+ // sorting
+// if function return negative number then its sort in a ascending way otherwise it sort in a deascending way a-b and b-a
+//a-b ===acending
+//b-a ===deascending
+
+const arr=[1,3,6,1,5,9,3,0].sort((a,b)=>a-b)
+arr
+
+const books = getBooks()
+const sortByPages = books.slice().sort((a,b)=>a.pages-b.pages)
+sortByPages
+//slice used for books stay same as old array and sort by pages stay as the sorted one

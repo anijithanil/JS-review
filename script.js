@@ -150,11 +150,11 @@ const data = [
 //   console.log(title)
 //   const author = book.author
   const {title,author} = book
-console.log(title,author)
+//console.log(title,author)
 
 const {genres} = book
  const[primarygenre,secondarygenre]=genres
- console.log(primarygenre,secondarygenre)
+ //console.log(primarygenre,secondarygenre)
 
  // ternaries
  const {pages} =book
@@ -163,9 +163,38 @@ const {genres} = book
 
  // arrow function
  const {publicationDate} = book
- console.log(publicationDate)
+ //console.log(publicationDate)
 
  const getYear = (str)=>{
     return(str.split("-")[0])}
     
- console.log(getYear(publicationDate))
+ //console.log(getYear(publicationDate))
+
+
+ //immuatble array
+
+ const books = getBooks()
+ 
+ //new book add
+
+ const newBook = {
+      id: 9,
+      title: "The Lord of the Rings",
+      publicationDate: "1954-07-29",
+
+ }
+
+// adding new book to existing book
+
+const afterBookAdd = [...books,newBook]
+console.log(afterBookAdd)
+
+// book delete from an array
+
+const afterDeleteBook = afterBookAdd.filter((book)=>book.id!==9)
+console.log(afterDeleteBook)
+
+// update book from an array
+
+const updateBook = afterDeleteBook.map((book)=>book.id===1?{...book,pages:2222}:book)
+console.log(updateBook)

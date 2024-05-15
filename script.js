@@ -201,8 +201,20 @@
 
 
 //promises"
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-.then((res)=>res.json())
-.then((data)=>console.log(data))
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then((res)=>res.json())
+// .then((data)=>console.log(data))
 
-console.log("hello")
+// console.log("hello")
+
+async function getFetch(){
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const data = await res.json();
+ //console.log(data)
+  return data;
+  
+
+}
+
+const todos = await getFetch();
+console.log(todos)
